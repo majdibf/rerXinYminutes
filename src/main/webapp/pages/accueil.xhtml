@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Majdi BEN FREDJ
+http://linkedin account adress
+Released for my personal project RER X dans Y minutes 
+Name       : RATP template
+Version    : 1.0
+Released   : 20160702
+-->
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"      
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:c="http://java.sun.com/jstl/core">
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title></title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+
+<!-- Default -->
+	<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Quicksand:400,700|Questrial" rel="stylesheet"></link>
+	<link href="../css/default.css" rel="stylesheet" type="text/css" media="all"></link>	
+	<link href="../fonts/fonts.css" rel="stylesheet" type="text/css" media="all"></link>
+
+<!-- Bootstrap -->
+	<link rel="stylesheet" href="../css/bootstrap/css/bootstrap.min.css"></link>
+	<script src="../css/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Metrodna -->
+	<link href="../css/metrodna/metrodna.css" rel="stylesheet"></link>
+
+<!-- JQuery -->
+	<script src="../js/jquery/jquery-3.0.0.min.js"></script>
+
+<!-- JQuery -->
+	<script src="../js/main.js"></script>
+
+<!-- Font-awesome -->
+	<link rel="stylesheet" href="../fonts/font-awesome-4.6.3/css/font-awesome.min.css"></link>
+</h:head>
+<h:body>
+	<!-- HEADER -->
+	<div class="row navbar">
+		<div id="header" class="row">
+			<div id="logo" class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<h1>
+						<span class="rer symbole">RER</span> <span><img
+							src="../images/ligneX.svg" class="logomode"></img></span> <span
+							style='font-family: "Roboto"'>dans</span> <span class="spantime"><i>Y</i>
+							minutes</span>
+					</h1>
+				</div>
+			</div>
+			<div id="menu" class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<ul>
+						<li class="current_page_item"><a href="#" accesskey="1"
+							title="">Accueil</a></li>
+						<li><a href="#" accesskey="2" title="">Alertes trafic</a></li>
+						<li><a href="#" accesskey="3" title="">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-12">
+			<div class="col-md-5 alert alert-warning col-md-offset-1">
+				<strong>Info!</strong> Les horaires pour les lignes C,D et E ne sont pas disponibles pour le moment!
+			</div>
+
+			<div class="timeclock col-md-2 col-md-offset-3">
+				<span id="currentTime">19:16:33</span>
+			</div>
+		</div>
+	</div>
+
+	<!-- Core -->
+	<div class="container">
+		<div class="col-md-12">
+		
+		</div>
+		<div class="list-group">
+		 	<ui:repeat value="#{ligneFormBean.lignes}" var="ligne">
+				<button type="button" class="list-group-item #{ligne.actif ? '' : 'disabled'}">
+					<h4 class="btn-ligne">
+						<span class="rer symbole">RER</span> <span
+							class="#{ligne.cssStyle}">Ligne #{ligne.designation}</span>
+					</h4>
+				</button>
+			</ui:repeat>
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<div id="copyright" class="footer">
+		<div class="row">
+			<p>
+				© Mbenfredj. All rights reserved. | Design by <a
+					href="" rel="nofollow">AndroTuxien</a>.
+			</p>
+			<ul class="contact">		
+				<li><a href="#" class="fa fa-subway" style="font-size:24px"></a></li>
+				<li><a href="#" class="fa fa-github-alt" style="font-size:24px"></a></li>
+				<li><a href="#" class="fa fa-facebook-official" style="font-size:24px"></a></li>
+			</ul>
+		</div>
+	</div>
+</h:body>
+</html>
