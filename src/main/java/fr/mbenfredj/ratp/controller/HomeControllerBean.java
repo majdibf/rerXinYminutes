@@ -8,7 +8,7 @@ import javax.faces.bean.ManagedProperty;
 import fr.mbenfredj.ratp.entity.Ligne;
 import fr.mbenfredj.ratp.service.IManagementService;
 
-@ManagedBean(name = "homeBean")
+@ManagedBean(name = "homeControllerBean")
 public class HomeControllerBean {
 
 	@ManagedProperty(value = "#{managementService}")

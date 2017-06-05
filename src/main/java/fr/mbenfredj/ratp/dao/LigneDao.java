@@ -1,6 +1,5 @@
 package fr.mbenfredj.ratp.dao;
 
-import java.awt.LinearGradientPaint;
 import java.util.List;
 
 import org.hibernate.Session;

@@ -11,6 +11,6 @@
         <property name="hibernate.default_schema">RATP</property>
         <property name="hibernate.dialect">org.hibernate.dialect.DerbyDialect</property>
         
-        <mapping class="com.ratp.transport.dao.model.Ligne"/>
+        <mapping class="fr.mbenfredj.ratp.entity.Ligne"/>
     </session-factory>
 </hibernate-configuration>
